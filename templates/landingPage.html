@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>
+            welcome {{username}}
+        </h1>
+        <form method="POST" action="/landingPage">
+            <input type="hidden" name="btn_id" value="list_of_problems">
+            <input type="submit" value="Find Solution">
+        </form>
+        <form method="POST" action="/landingPage">
+            <input type="hidden" name="btn_id" value="create_solution">
+            <input type="submit" value="Create Solution">
+        </form>
+        <form method="POST" action="/landingPage">
+            <input type="hidden" name="btn_id" value="edit_solution">
+            <input type="submit" value="Edit Solution">
+        </form>
+    </body>
+</html>

@@ -53,19 +53,66 @@ def login():
             first_user = User(username=data['username'])
             db.session.add(first_user)
             db.session.commit()
+
         for user in users:
             if user.username == data["username"]:
                 registered = True
-                return flask.redirect("/")
+                current_user = user
+
             
-            if not registered:
-                new_user = User(username=data['username'])
-                db.session.add(new_user)
-                db.session.commit()
-                return flask.redirect("/")
+        if not registered:
+            new_user = User(username=data['username'])
+            db.session.add(new_user)
+            db.session.commit()
+            current_user = new_user
+        
+        login_user(current_user)
+        return flask.redirect("/landingPage")
+
+                
                 
 
     return flask.render_template("login.html")
+
+
+@app.route("/landingPage", methods=["GET","POST"])
+@login_required
+def landingPage():
+    if flask.request.method == "POST":
+        data = flask.request.form
+        if data["btn_id"] == "list_of_problems":
+            return flask.redirect("/problemList")
+
+        if data["btn_id"] == "create_solution":
+            return flask.redirect("/createSolution")
+
+        if data["btn_id"] == "edit_solution":
+            return flask.redirect("/userSolutions")
+
+
+    Username = current_user.username
+    return flask.render_template(
+        "landingPage.html",
+        username = Username,
+    )
+
+@app.route("/problemList", methods=["GET","POST"])
+@login_required
+def problemList():
+    return flask.render_template("problemList.html")
+    
+@app.route("/createSolution", methods=["GET","POST"])
+@login_required
+def createSolution():
+    return flask.render_template("createSolution.html")
+
+@app.route("/userSolutions", methods=["GET","POST"])
+@login_required
+def userSolutions():
+    return flask.render_template("userSolutions.html")
+
+
+
 
 app.run(
     host=os.getenv("IP", "0.0.0.0"), port=int(os.getenv("PORT", "8080")), debug=True
