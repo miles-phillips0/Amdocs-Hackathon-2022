@@ -1,0 +1,190 @@
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#left-header {
+    justify-content: right;
+    margin-left: 30px;
+}
+
+#right-header {
+    justify-content: right;
+    margin-right: 20px;
+}
+
+#filters {
+    margin-top: 40px;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: sans-serif;
+    min-width: 400px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 1em;
+}
+
+.table thead tr {
+    background-color: #1A73E8;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table tbody tr {
+    border-bottom: 2px solid #dddddd;
+}
+
+.table th,
+.table td {
+    padding: 12px 18px;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr.active-row {
+    color: #1A73E8;
+}
+
+#table {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: #1A73E8;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    font-family: sans-serif;
+    height: 40px;
+    width: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.loginBody {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("bgimage.jpg");
+    font-family: sans-serif;
+}
+
+.loginBody h1 {
+    font-size: 36px;
+}
+
+.loginBtn {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 15px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: white;
+}
+
+.usernameField {
+    height: 20px;
+    width: 192px;
+    border-radius: 20px;
+    border: white;
+}
+
+.loginPage {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.loginPage p {
+    margin-top: 40px;
+    text-align: left;
+    margin-bottom: 2px;
+    margin-left: 5px;
+
+}
+
+.landingPageBtns {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+    border-radius: 5px;
+
+}
+
+.landingPageBtns button {
+    height: 130px;
+    width: 130px;
+    border-radius: 10px;
+    border: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: #3bd1d3;
+}
+
+
+
+.landingPageBtns .submitBtn {
+    height: 130px;
+    width: 130px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+#btn1 {
+    background-color: #fed757;
+}
+
+#btn2 {
+    background-color: #79f391;
+}
+
+#btn3 {
+    background-color: #fa80d2;
+}
+
+.landingPageBtns {
+    gap: 20px;
+}
+
+#landingPageBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("bgimage.jpg");
+}
+
