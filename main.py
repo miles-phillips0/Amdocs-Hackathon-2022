@@ -31,6 +31,14 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True)
 
+class Problem(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(120), nullable=False)
+    solution = db.Column(db.String(256), nullable=False)
+    author = db.Column(db.String(120), nullable=False, unique=False)
+
+
+
 db.create_all()
 
 @login_manager.user_loader
@@ -104,6 +112,16 @@ def problemList():
 @app.route("/createSolution", methods=["GET","POST"])
 @login_required
 def createSolution():
+    if flask.request.method == "POST":
+        data = flask.request.form
+        new_problem = Problem(
+            title=data['title'],
+            solution=data['solution'],
+            author=current_user.username,
+        )
+        db.session.add(new_problem)
+        db.session.commit()
+    
     return flask.render_template("createSolution.html")
 
 @app.route("/userSolutions", methods=["GET","POST"])
