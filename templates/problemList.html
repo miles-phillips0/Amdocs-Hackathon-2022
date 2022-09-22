@@ -4,5 +4,12 @@
         <h1>
             problem list
         </h1>
+        <o1>
+            {%for i in range(0,len_problems)%}
+            <li>
+                {{problems[i].author}} : Problem {{problems[i].title}} : Solution {{problems[i].solution}}
+            </li>
+            {%endfor%}
+        </o1>
     </body>
 </html>

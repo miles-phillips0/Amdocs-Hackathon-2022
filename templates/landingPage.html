@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <body>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body id="landingPageBody">
         <h1>
-            welcome {{username}}
+            Welcome {{username}}
         </h1>
-        <form method="POST" action="/landingPage">
-            <input type="hidden" name="btn_id" value="list_of_problems">
-            <input type="submit" value="Find Solution">
-        </form>
-        <form method="POST" action="/landingPage">
-            <input type="hidden" name="btn_id" value="create_solution">
-            <input type="submit" value="Create Solution">
-        </form>
-        <form method="POST" action="/landingPage">
-            <input type="hidden" name="btn_id" value="edit_solution">
-            <input type="submit" value="Edit Solution">
-        </form>
+        <div class="landingPageBtns">
+            <button><img src="../home.png" width="50px" height="50px"></button>
+            <form method="POST" action="/landingPage">
+                <input type="hidden" name="btn_id" value="list_of_problems">
+                <input id="btn1" class="submitBtn" type="submit" value="Find Solution">
+            </form>
+            <form method="POST" action="/landingPage">
+                <input type="hidden" name="btn_id" value="create_solution">
+                <input id="btn2" class="submitBtn" type="submit" value="Create Solution">
+            </form>
+            <form method="POST" action="/landingPage">
+                <input type="hidden" name="btn_id" value="edit_solution">
+                <input id="btn3" class="submitBtn" type="submit" value="Edit Solution">
+            </form>
+        </div>
     </body>
 </html>

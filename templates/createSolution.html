@@ -4,13 +4,14 @@
         <h1>
             create solution
         </h1>
-        <div id="title"></div>
-        <div id="category"></div>
-        <div id="description">
-            <b>Description</b>
+        <form method="POST" action="/createSolution">
+            <p>Title</p>
+            <input type="text" name="title">
+            <div id="category"></div>
+            <p>Solution Description</p>
             <textarea name="" id="" cols="30" rows="10">
             </textarea>
-            <input type="submit" value="doc_submit">
-        </div>
+            <input type="submit" value="post solution">
+        </form>
     </body>
 </html>
