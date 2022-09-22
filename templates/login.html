@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1> LOG IN </h1>
-        <form method="POST" action="/login">
-            <input type="text" name="username" placeholder="Username" id="uname">
-            <input type="submit" value="log in"> 
-        </form>
+    <head>
+        <h1><em>Problem?</em></h1>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body class="loginBody">
+        <div class="loginPage">
+            <h1>Log In</h1>
+            <div class="loginForms">
+                <form method="POST" action="/login">
+                    <p>Username</p>
+                    <input class="usernameField" type="text" name="username" placeholder="" id="uname">
+                   <div>
+                    <input class="loginBtn" type="submit" value="Log In"> 
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
     
 </html>
