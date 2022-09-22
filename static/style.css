@@ -185,6 +185,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("bgimage.jpg");
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
