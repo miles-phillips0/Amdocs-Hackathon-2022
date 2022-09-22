@@ -1,0 +1,82 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#left-header {
+    justify-content: right;
+    margin-left: 20px;
+}
+
+#right-header {
+    justify-content: right;
+    margin-right: 20px;
+}
+
+#filters {
+    margin-top: 40px;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: sans-serif;
+    min-width: 400px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 1em;
+}
+
+.table thead tr {
+    background-color: #1A73E8;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr.active-row {
+    font-weight: bold;
+    color: #1A73E8;
+}
+
+#table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login {
+    background-color: #1A73E8;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    font-family: sans-serif;
+    height: 40px;
+    width: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
