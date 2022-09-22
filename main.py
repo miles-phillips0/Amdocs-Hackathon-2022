@@ -40,9 +40,8 @@ def load_user(user_id):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if flask.request.method == "POST":
-        return flask.redirect("/login")
-    return flask.render_template("index.html")
+
+    return flask.redirect("/login")
 
 @app.route("/login", methods=["GET","POST"])
 def login():
