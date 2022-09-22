@@ -70,13 +70,67 @@ body {
     align-items: center;
 }
 
-#login {
+.login {
     background-color: #1A73E8;
     color: white;
-    border: 2px solid white;
+    border: 1px solid white;
     font-size: 20px;
     font-family: sans-serif;
     height: 40px;
     width: 80px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.loginForms {
+
+}
+
+.loginBody {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("bgimage.jpg");
+    font-family: sans-serif;
+}
+
+.loginBody h1 {
+    font-size: 36px;
+}
+
+.loginBtn {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 15px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: white;
+}
+
+.usernameField {
+    height: 20px;
+    width: 192px;
+    border-radius: 20px;
+    border: white;
+}
+
+.loginPage {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.loginPage p {
+    margin-top: 40px;
+    text-align: left;
+    margin-bottom: 2px;
+    margin-left: 5px;
+
 }
