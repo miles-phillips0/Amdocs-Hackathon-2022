@@ -107,7 +107,13 @@ def landingPage():
 @app.route("/problemList", methods=["GET","POST"])
 @login_required
 def problemList():
-    return flask.render_template("problemList.html")
+    Problems = Problem.query.all()
+    Len_problems = len(Problems)
+    return flask.render_template(
+        "problemList.html",
+        problems=Problems,
+        len_problems = Len_problems
+        )
     
 @app.route("/createSolution", methods=["GET","POST"])
 @login_required
