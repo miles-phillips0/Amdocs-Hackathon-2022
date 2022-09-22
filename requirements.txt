@@ -1,2 +1,6 @@
-Flask==2.0.2
+Flask
 requests
+python-dotenv
+flask-login
+Flask-SQLAlchemy
+psycopg2-binary
