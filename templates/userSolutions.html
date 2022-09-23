@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <body>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body class="userSolutionsBody">
         <h1>
             {{username}}'s past solutions
         </h1>
-        <o1>
-            {%for i in range(0,len_problems)%}
-            <li>
-                Problem {{problems[i].title}} : Solution {{problems[i].solution}}
-                <input type="submit" value="edit solution">
-            </li>
-            {%endfor%}
-        </o1>
-        <form method="POST" action="/userSolutions">
-            <input type="submit" value="Back to Landing Page">
-        </form>
+        <table id="myTable" class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for i in range(0,len_problems)%}
+            <tr>
+                <td>Problem {{problems[i].title}}
+                </td> <td>Solution {{problems[i].solution}}
+                    <input type="submit" value="Edit Solution">
+                </td>
+            </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        <div id="footer">
+            <form method="POST" action="/userSolutions">
+                <input type="submit" value="Back to Landing Page">
+            </form>
+        </div>
     </body>
 </html>

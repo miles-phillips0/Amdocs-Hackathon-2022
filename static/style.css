@@ -307,3 +307,11 @@ body {
     font-size: 17px;
 }
 
+.userSolutionsBody {
+    display: flex;
+    flex-direction: column;
+    background-image: url("bgimageActuallyFinal.jpg");
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+}
+
