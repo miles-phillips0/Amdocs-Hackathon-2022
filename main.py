@@ -138,7 +138,13 @@ def createSolution():
 @app.route("/userSolutions", methods=["GET","POST"])
 @login_required
 def userSolutions():
-    return flask.render_template("userSolutions.html")
+    Problems = Problem.query.filter_by(author=current_user.username)
+    Len_problems = Problems.count()
+    return flask.render_template(
+        "userSolutions.html",
+        username = current_user.username
+    
+        )
 
 
 
