@@ -7,13 +7,28 @@
         <h1>
             Problem List
         </h1>
-        <o1>
-            {%for i in range(0,len_problems)%}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Problem</th>
+                    <th>Step-By-Step Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for i in range(0,len_problems)%}
+            <tr>
+                <td>{{problems[i].author}}</td> <td>Problem {{problems[i].title}}</td> <td>Solution {{problems[i].solution}}</td>
+            </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+            <!-- {%for i in range(0,len_problems)%}
             <li>
                 {{problems[i].author}} : Problem {{problems[i].title}} : Solution {{problems[i].solution}}
             </li>
             {%endfor%}
-        </o1>
+        </o1> -->
     </body>
     <div id="footer">
         <form method="POST" action="/problemList">
