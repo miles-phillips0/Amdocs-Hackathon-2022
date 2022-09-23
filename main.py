@@ -36,6 +36,7 @@ class Problem(db.Model):
     title = db.Column(db.String(120), nullable=False)
     solution = db.Column(db.String(256), nullable=False)
     author = db.Column(db.String(120), nullable=False, unique=False)
+    
 
 
 
@@ -48,7 +49,6 @@ def load_user(user_id):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-
     return flask.redirect("/login")
 
 @app.route("/login", methods=["GET","POST"])
@@ -138,11 +138,15 @@ def createSolution():
 @app.route("/userSolutions", methods=["GET","POST"])
 @login_required
 def userSolutions():
+    if flask.request.method == "POST":
+        return flask.redirect("/landingPage")
     Problems = Problem.query.filter_by(author=current_user.username)
     Len_problems = Problems.count()
     return flask.render_template(
         "userSolutions.html",
-        username = current_user.username
+        username = current_user.username,
+        problems = Problems,
+        len_problems = Len_problems,
     
         )
 

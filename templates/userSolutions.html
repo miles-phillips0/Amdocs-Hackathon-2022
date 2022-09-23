@@ -8,8 +8,12 @@
             {%for i in range(0,len_problems)%}
             <li>
                 Problem {{problems[i].title}} : Solution {{problems[i].solution}}
-                
+                <input type="submit" value="edit solution">
             </li>
+            {%endfor%}
         </o1>
+        <form method="POST" action="/userSolutions">
+            <input type="submit" value="Back to Landing Page">
+        </form>
     </body>
 </html>
