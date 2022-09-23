@@ -272,3 +272,13 @@ body {
 
 }
 
+.backToLanding input {
+    margin-top: 100px;
+    width: 244px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
