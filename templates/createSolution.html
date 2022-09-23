@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <body>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body class="createSolutionBody">
         <h1>
-            create solution
+            Create Solution
         </h1>
         <form method="POST" action="/createSolution">
-            <p>title</p>
+            <p>Title</p>
             <input type="text" name="title">
-            <p>solution</p>
-            <input type="text" name="solution">
-            <input type="submit" value="post solution">
+            <p>Solution</p>
+            <input type="text" name="solution"><br>
+            <input type="submit" value="Post Solution">
         </form>
     </body>
 </html>
