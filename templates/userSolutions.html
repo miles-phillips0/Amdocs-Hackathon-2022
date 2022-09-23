@@ -4,5 +4,12 @@
         <h1>
             {{username}}'s past solutions
         </h1>
+        <o1>
+            {%for i in range(0,len_problems)%}
+            <li>
+                Problem {{problems[i].title}} : Solution {{problems[i].solution}}
+                
+            </li>
+        </o1>
     </body>
 </html>
