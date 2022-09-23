@@ -107,6 +107,8 @@ def landingPage():
 @app.route("/problemList", methods=["GET","POST"])
 @login_required
 def problemList():
+    if flask.request.method == "POST":
+        return flask.redirect("/landingPage")
     Problems = Problem.query.all()
     Len_problems = len(Problems)
     return flask.render_template(
