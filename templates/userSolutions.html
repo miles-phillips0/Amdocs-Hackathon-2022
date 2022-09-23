@@ -17,8 +17,8 @@
             <tbody>
                 {%for i in range(0,len_problems)%}
             <tr>
-                <td>Problem {{problems[i].title}}
-                </td> <td>Solution {{problems[i].solution}}
+                <td>{{problems[i].title}}
+                </td> <td> {{problems[i].solution}}
                     <input type="submit" value="Edit Solution">
                 </td>
             </tr>
