@@ -107,6 +107,8 @@ def landingPage():
 @app.route("/problemList", methods=["GET","POST"])
 @login_required
 def problemList():
+    if flask.request.method == "POST":
+        return flask.redirect("/landingPage")
     Problems = Problem.query.all()
     Len_problems = len(Problems)
     return flask.render_template(
@@ -120,13 +122,16 @@ def problemList():
 def createSolution():
     if flask.request.method == "POST":
         data = flask.request.form
-        new_problem = Problem(
-            title=data['title'],
-            solution=data['solution'],
-            author=current_user.username,
-        )
-        db.session.add(new_problem)
-        db.session.commit()
+        if data['btn_id'] == 'post_solution':
+            new_problem = Problem(
+                title=data['title'],
+                solution=data['solution'],
+                author=current_user.username,
+            )
+            db.session.add(new_problem)
+            db.session.commit()
+        if data['btn_id'] == 'back':
+            return flask.redirect("/landingPage")
     
     return flask.render_template("createSolution.html")
 

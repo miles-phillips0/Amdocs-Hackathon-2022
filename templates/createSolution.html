@@ -8,6 +8,7 @@
             Create Solution
         </h1>
         <form method="POST" action="/createSolution">
+            <input type="hidden" name="btn_id" value="post_solution">
             <p>Title</p>
             <input type="text" name="title">
             <div id="category"></div>
@@ -18,6 +19,10 @@
             <div class="submitBtnSolutionPage">
             <input type="submit" value="Post Solution">
             </div>
+        </form>
+        <form method="POST" action="/createSolution">
+            <input type="hidden" name="btn_id" value="back">
+            <input type="submit" value="Back to Landing Page">
         </form>
     </body>
 </html>
